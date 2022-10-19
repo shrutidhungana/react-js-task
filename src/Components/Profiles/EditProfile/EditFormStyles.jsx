@@ -7,7 +7,8 @@ margin: 0 auto;
 border: 2px solid #0000cd;
 border-radius: 10px;
 font-size: 18px;
-padding: 7px 10px
+padding: 7px 10px;
+cursor: pointer;
 `
 export const Input = styled.input`
 width: 55%;

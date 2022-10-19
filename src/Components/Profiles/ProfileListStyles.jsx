@@ -39,8 +39,7 @@ margin-left: 20px;
 color: #0000cd 
 `
 export const Paragraph2 = styled.p`
-display: flex;
-justify-content: center;
+ text-align: center;
 `
 export const Paragraph3 = styled.p`
 margin-left: 25px;
@@ -57,6 +56,7 @@ border-radius: 10px;
 font-size: 18px;
 padding: 7px 10px;
 width: 100px;
+cursor: pointer
 `
 export const Hr = styled.hr`
  width: 200px;

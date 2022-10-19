@@ -32,6 +32,7 @@ padding: 7px 10px;
 border: 2px solid #191970 ;
 width: 60px;
 border-radius: 5px;
+cursor: pointer;
 `
 export const Paragraph = styled.p`
 text-align: center;
