@@ -1,13 +1,13 @@
-
-
 import React from 'react'
 import AddForm from './AddForm'
+import { Heading, Div } from './AddTableStyles'
 
 const AddTable = () => {
   return (
-      <div>
+      <Div>
+          <Heading>Please enter the following credentials:</Heading>
           <AddForm />
-      </div>
+      </Div>
   )
 }
 

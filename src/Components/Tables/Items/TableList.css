@@ -1,0 +1,41 @@
+.link{
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    margin-left: 25px;
+
+}
+
+.th{
+    background-color:#191970 ;
+    color: white;
+}
+
+.table{
+    width:100%; 
+    border:1px solid black; 
+    border-collapse: collapse;
+    border-radius: 5px;
+   margin-bottom: 25px;
+}
+
+.td{
+    border-right: solid 1px #1b1b1b ; 
+    border-left: solid 1px #1b1b1b ;
+    background-color: green;
+    color: white;
+    text-align: center;
+  
+}
+
+.th2{
+    color: white;
+    background-color: #004242 ;
+}
+
+.lk{
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    margin-right: 25px;
+}

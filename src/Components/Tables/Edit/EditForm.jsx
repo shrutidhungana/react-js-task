@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import {  useParams, useNavigate } from "react-router-dom";
 import { TableContext } from "../../../Context/TableContext";
+import { Button, Container, Input, Label, Span, Labell,Inputt, Select, Option } from "./EditFormStyles";
 
 
 
@@ -40,27 +41,34 @@ const EditForm = () => {
   const onSubmit = (e) => {
     e.preventDefault()
       editTable(selectedTable)
-      navigate("/")
+      navigate("/profile")
   };
 
   return (
-    <div>
+    <Container>
       <form onSubmit={onSubmit}>
         <div>
-          <label htmlFor="name">
-            Name:*{/* *(Star) indicates it is required */}
-          </label>
-                  <input type="text"
+          <Label htmlFor="name">
+            Name:
+           <Span>
+              *{/* *(Star) indicates it is required */}
+              </Span>
+          </Label>
+                  <Input type="text"
                       required
                       value = {selectedTable.name}
                       onChange={(e) => handleOnChange("name", e.target.value)}
                   />
         </div>
         <div>
-          <label htmlFor="email">
-            E-mail*{/* *(Star) indicates it is required */}
-          </label>
-                  <input type="email"
+          <Label htmlFor="email">
+            E-mail
+            <Span>
+          *
+            </Span>
+          {/* *(Star) indicates it is required */}
+          </Label>
+                  <Input type="email"
                       required
                       value={selectedTable.email}
                   onChange={(e) => handleOnChange("email", e.target.value)}
@@ -69,10 +77,14 @@ const EditForm = () => {
                     
         </div>
         <div>
-          <label htmlFor="phoneNumber">
-            Phone Number:*{/* *(Star) indicates it is required */}
-          </label>
-                  <input type="text"
+          <Label htmlFor="phoneNumber">
+            Phone Number:
+            <Span>
+              *
+            </Span>
+              {/* *(Star) indicates it is required */}
+          </Label>
+                  <Input type="text"
                       pattern="[0-9]*"
                       required
                       value={selectedTable.phoneNumber}
@@ -83,53 +95,57 @@ const EditForm = () => {
                   
         </div>
         <div>
-          <label htmlFor="dob">Date Of Birth (DOB):</label>
-                  <input type="date"
+          <Label htmlFor="dob">Date Of Birth (DOB):</Label>
+                  <Input type="date"
                   value={selectedTable.dob}
                   onChange={(e) => handleOnChange("dob", e.target.value)}
                   
                   />
         </div>
         <div>
-          <label htmlFor="address">Address:</label>
+          <Label htmlFor="address">Address:</Label>
 
-          <label htmlFor="city">City:</label>
-                  <input type="text"
+          <Labell htmlFor="city">City:</Labell>
+                  <Inputt type="text"
                   value={selectedTable.city}
                   onChange={(e) => handleOnChange("city", e.target.value)}
                   
                      
                   />
-          <label htmlFor="district">District:</label>
-                  <input type="text"
+          <Labell htmlFor="district">District:</Labell>
+                  <Inputt type="text"
                       value={selectedTable.district}
                       onChange={(e) => handleOnChange("district", e.target.value)}
                       
                   />
-          <label htmlFor="province">Province:</label>
-          <select defaultValue="province">
-            <option value="province" disabled>
+          <Labell htmlFor="province">Province:</Labell>
+          <Select defaultValue="province"
+          value={selectedTable.province}
+          onChange={(e) => handleOnChange("province", e.target.value)}
+          >
+            <Option value="province" disabled>
               Choose Province
-            </option>
-            <option value="provinceOne">Province One</option>
-            <option value="madeshProvince">Madesh Province</option>
-            <option value="bagmatiProvince">Bagmati Province</option>
-            <option value="gandakiProvince">Gandaki Province</option>
-            <option value="lumbiniProvince">Lumbini Province</option>
-            <option value="karnaliProvince">Karnali Province</option>
-            <option value="sudhurProvince">Sudhurpaschhim Province</option>
-          </select>
-          <label htmlFor="country">Country:</label>
-                  <input type="text"
+            </Option>
+            <Option value="provinceOne">Province One</Option>
+            <Option value="madeshProvince">Madesh Province</Option>
+            <Option value="bagmatiProvince">Bagmati Province</Option>
+            <Option value="gandakiProvince">Gandaki Province</Option>
+            <Option value="lumbiniProvince">Lumbini Province</Option>
+            <Option value="karnaliProvince">Karnali Province</Option>
+            <Option value="sudhurProvince">Sudhurpaschhim Province</Option>
+          </Select>
+          <Labell htmlFor="country">Country:</Labell>
+                  <Inputt type="text"
                       value={selectedTable.country}
                       onChange={(e) => handleOnChange("country", e.target.value)}
                       
                   />
               </div>
-              <button>Edit Table</button>
+              <Button>Edit Table</Button>
       </form>
-    </div>
+    </Container>
   );
 };
 
 export default EditForm;
+

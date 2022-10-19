@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import { TableContext } from "../../../Context/TableContext";
-
+import { Button, Container,Label, Input, Inputt, Labell, Select, Option, Span, Paragraph} from "./AddFormStyles";
 const AddForm = () => {
    
   const [name, setName] = useState("");
@@ -9,7 +9,8 @@ const AddForm = () => {
   const [dob, setDob] = useState("");
   const [city, setCity] = useState("");
   const [district, setDistrict] = useState("");
-  const [country, setCountry] = useState("Nepal");
+    const [country, setCountry] = useState("Nepal");
+    const[province, setProvince] = useState("")
     const [errors, setErrors] = useState(false);
   const [error, setError] = useState(false);
   const {createTable, tables} = useContext(TableContext)
@@ -55,6 +56,10 @@ const AddForm = () => {
     const handleCountryChange = (e) => {
         setCountry(e.target.value)
     }
+
+    const handleProvinceChange = (e) => {
+        setProvince(e.target.value)
+    }
   
   const onSubmit = (e) => {
     e.preventDefault();
@@ -72,13 +77,17 @@ const AddForm = () => {
     createTable(tablesNew)
   }
   return (
-    <div>
+    <Container>
       <form onSubmit={onSubmit}>
         <div>
-          <label htmlFor="name">
-            Name:*{/* *(Star) indicates it is required */}
-          </label>
-                  <input type="text"
+          <Label htmlFor="name">
+                      Name:
+                     <Span>
+                      *
+                          {/* *(Star) indicates it is required */}
+                          </Span>
+          </Label>
+                  <Input type="text"
                       required
                       placeholder="Enter your Name.."
                       value={name}
@@ -86,22 +95,28 @@ const AddForm = () => {
                   />
         </div>
         <div>
-          <label htmlFor="email">
-            E-mail*{/* *(Star) indicates it is required */}
-          </label>
-                  <input type="email"
+          <Label htmlFor="email">
+                      E-mail
+                      <Span>
+                          *{/* *(Star) indicates it is required */}
+                          </Span>
+          </Label>
+                  <Input type="email"
                       required
                       placeholder="name@example.com"
                       value={email}
                       onChange={handleEmailChange}
                   />
-                  {errors && <p>{errors }</p>}
+                  {errors && <Paragraph>{errors }</Paragraph>}
         </div>
         <div>
-          <label htmlFor="phoneNumber">
-            Phone Number:*{/* *(Star) indicates it is required */}
-          </label>
-                  <input type="text"
+          <Label htmlFor="phoneNumber">
+                      Phone Number:
+                      <Span>
+                      *{/* *(Star) indicates it is required */}
+                      </Span>
+          </Label>
+                  <Input type="text"
                       pattern="[0-9]*"
                       required
                       placeholder="Enter your Phone Number"
@@ -109,53 +124,56 @@ const AddForm = () => {
                       onChange = {handlePhoneNumberChange}
                      
                   />
-                  {error && <p>{error }</p>}
+                  {error && <Paragraph>{error }</Paragraph>}
         </div>
         <div>
-          <label htmlFor="dob">Date Of Birth (DOB):</label>
-                  <input type="date"
+          <Label htmlFor="dob">Date Of Birth (DOB):</Label>
+                  <Input type="date"
                       value={dob}
                       onChange = {handleDOBChange}
                   />
         </div>
         <div>
-          <label htmlFor="address">Address:</label>
+          <Label htmlFor="address">Address:</Label>
 
-          <label htmlFor="city">City:</label>
-                  <input type="text"
+          <Labell htmlFor="city">City:</Labell>
+                  <Inputt type="text"
                       placeholder="Enter your city.."
                       value={city}
                       onChange = {handleCityChange}
                   />
-          <label htmlFor="district">District:</label>
-                  <input type="text"
+          <Labell htmlFor="district">District:</Labell>
+                  <Inputt type="text"
                       placeholder="Enter your district.."
                       value={district}
                       onChange = {handleDistrictChange}
                   />
-          <label htmlFor="province">Province:</label>
-          <select defaultValue="province">
-            <option value="province" disabled>
+          <Labell htmlFor="province">Province:</Labell>
+                  <Select defaultValue="province"
+                      onChange={handleProvinceChange}
+                      value = {province}
+                  >
+            <Option value="province" disabled>
               Choose Province
-            </option>
-            <option value="provinceOne">Province One</option>
-            <option value="madeshProvince">Madesh Province</option>
-            <option value="bagmatiProvince">Bagmati Province</option>
-            <option value="gandakiProvince">Gandaki Province</option>
-            <option value="lumbiniProvince">Lumbini Province</option>
-            <option value="karnaliProvince">Karnali Province</option>
-            <option value="sudhurProvince">Sudhurpaschhim Province</option>
-          </select>
-          <label htmlFor="country">Country:</label>
-                  <input type="text"
+            </Option>
+            <Option value="provinceOne">Province One</Option>
+            <Option value="madeshProvince">Madesh Province</Option>
+            <Option value="bagmatiProvince">Bagmati Province</Option>
+            <Option value="gandakiProvince">Gandaki Province</Option>
+            <Option value="lumbiniProvince">Lumbini Province</Option>
+            <Option value="karnaliProvince">Karnali Province</Option>
+            <Option value="sudhurProvince">Sudhurpaschhim Province</Option>
+          </Select>
+          <Labell htmlFor="country">Country:</Labell>
+                  <Inputt type="text"
                       placeholder="Enter Country"
                       value={country}
                       onChange = {handleCountryChange}
                   />
               </div>
-              <button>Create Table</button>
+              <Button>Create Table</Button>
       </form>
-    </div>
+    </Container>
   );
 };
 

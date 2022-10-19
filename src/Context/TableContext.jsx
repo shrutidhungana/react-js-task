@@ -3,7 +3,8 @@ import TableReducers from '../Reducers/TableReducers'
 import { CREATE_TABLE, EDIT_TABLE, DELETE_TABLE } from '../Reducers/ReducerTypes'
 
 const initialState = {
-    tables: [],
+    tables:  [],
+
   };
   
 export const TableContext = createContext(initialState)
@@ -33,7 +34,7 @@ const TableProvider = ({ children }) => {
     };
   
     useEffect(() => {
-      
+        
   })
 
     return (

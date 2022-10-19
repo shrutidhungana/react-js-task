@@ -18,3 +18,50 @@ export const Paragraph1 = styled.p`
   font-weight: bold;
   font-size: 20px;
 `
+export const Container = styled.div`
+width: 450px;
+height: 550px;
+border: 1px solid #d3d3d3;
+margin: 0 auto;
+background-color:#d3d3d3;
+`
+export const Heading = styled.h3`
+text-align: center;
+color: #000039
+`
+export const Paragraph = styled.p`
+text-align: left;
+font-size: 18px;
+margin-left: 35px;
+`
+export const Span = styled.span`
+margin-left: 20px;
+color: #0000cd 
+`
+export const Paragraph2 = styled.p`
+display: flex;
+justify-content: center;
+`
+export const Paragraph3 = styled.p`
+margin-left: 25px;
+`
+export const Paragraph4 = styled.p`
+margin-left: 5px;
+`
+export const Button = styled.div`
+background-color:#0000cd;
+display: block;
+margin: 0 auto;
+border: 2px solid #0000cd;
+border-radius: 10px;
+font-size: 18px;
+padding: 7px 10px;
+width: 100px;
+`
+export const Hr = styled.hr`
+ width: 200px;
+
+`
+export const Paragraph5 = styled.p`
+
+`

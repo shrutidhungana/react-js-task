@@ -119,7 +119,10 @@ const EditForm = () => {
                       
                   />
           <Labell htmlFor="province">Province:</Labell>
-          <Select defaultValue="province">
+                  <Select defaultValue="province"
+                      value={selectedTable.province}
+                      onChange={(e) => handleOnChange("province", e.target.value)}
+                  >
             <Option value="province" disabled>
               Choose Province
             </Option>
