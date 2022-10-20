@@ -41,7 +41,7 @@ const EditForm = () => {
   const onSubmit = (e) => {
     e.preventDefault()
       editTable(selectedTable)
-      navigate("/profile")
+      navigate("/")
   };
 
   return (
@@ -126,13 +126,13 @@ const EditForm = () => {
             <Option value="province" disabled>
               Choose Province
             </Option>
-            <Option value="provinceOne">Province One</Option>
-            <Option value="madeshProvince">Madesh Province</Option>
-            <Option value="bagmatiProvince">Bagmati Province</Option>
-            <Option value="gandakiProvince">Gandaki Province</Option>
-            <Option value="lumbiniProvince">Lumbini Province</Option>
-            <Option value="karnaliProvince">Karnali Province</Option>
-            <Option value="sudhurProvince">Sudhurpaschhim Province</Option>
+            <Option value="Province One">Province One</Option>
+            <Option value="Madesh Province">Madesh Province</Option>
+            <Option value="Bagmati Province">Bagmati Province</Option>
+            <Option value="Gandaki Province">Gandaki Province</Option>
+            <Option value="Lumbini Province">Lumbini Province</Option>
+            <Option value="Karnali Province">Karnali Province</Option>
+            <Option value="sudhurpaschhim Province">Sudhurpaschhim Province</Option>
           </Select>
           <Labell htmlFor="country">Country:</Labell>
                   <Inputt type="text"

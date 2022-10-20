@@ -1,12 +1,12 @@
-import React from 'react'
-import ProfileList from './ProfileList'
+import React from "react";
+import ProfileList from "./ProfileList";
 
 const Profiles = () => {
   return (
-      <div>
-          <ProfileList />
-      </div>
-  )
-}
+    <div>
+      <ProfileList />
+    </div>
+  );
+};
 
-export default Profiles
+export default Profiles;
