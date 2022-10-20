@@ -151,7 +151,7 @@ const AddForm = () => {
           <Labell htmlFor="province">Province:</Labell>
                   <Select defaultValue="province"
                       onChange={handleProvinceChange}
-                      value = {province}
+                     
                   >
             <Option value="province" disabled>
               Choose Province

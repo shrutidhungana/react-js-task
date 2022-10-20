@@ -42,11 +42,11 @@ export const Paragraph2 = styled.p`
  text-align: center;
 `
 export const Paragraph3 = styled.p`
-margin-left: 25px;
+margin-left: 35px;
+font-size: 18px;
 `
-export const Paragraph4 = styled.p`
-margin-left: 5px;
-`
+
+
 export const Button = styled.div`
 background-color:#0000cd;
 display: block;
@@ -62,6 +62,5 @@ export const Hr = styled.hr`
  width: 200px;
 
 `
-export const Paragraph5 = styled.p`
 
-`
+

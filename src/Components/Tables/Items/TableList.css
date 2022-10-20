@@ -9,6 +9,8 @@
 .th{
     background-color:#191970 ;
     color: white;
+    border-right:  1px solid  #1b1b1b ; 
+    border-left: 1px solid  #1b1b1b ;
 }
 
 .table{
@@ -20,8 +22,9 @@
 }
 
 .td{
-    border-right: solid 1px #1b1b1b ; 
-    border-left: solid 1px #1b1b1b ;
+    border-right:  1px solid  #1b1b1b ; 
+    border-left: 1px solid  #1b1b1b ;
+    border-bottom: 1px solid  #1b1b1b ;
     background-color: green;
     color: white;
     text-align: center;
@@ -31,6 +34,8 @@
 .th2{
     color: white;
     background-color: #004242 ;
+    border-right:  1px solid  #1b1b1b ; 
+    border-left: 1px solid  #1b1b1b ;
 }
 
 .lk{

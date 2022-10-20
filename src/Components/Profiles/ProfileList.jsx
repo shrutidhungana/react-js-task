@@ -12,9 +12,9 @@ import {
   Paragraph2,
   Button,
   Paragraph3,
-  Paragraph4,
+  
     Hr,
-  Paragraph5
+  
 } from "./ProfileListStyles";
 import "./ProfileList.css";
 const ProfilesList = () => {
@@ -49,25 +49,31 @@ const ProfilesList = () => {
                 <Hr />
                 <Paragraph2>
                   Address:
-                  <Paragraph4>
+                  
+                  </Paragraph2>
+                  <Paragraph3>
                     City:
-                    {tablee.city}
-                  </Paragraph4>
+                    <Span>{tablee.city}</Span>
+                    <Hr />
+                  </Paragraph3>
                   <Paragraph3>
                     District:
-                    {tablee.district}
+                    <Span>{tablee.district}</Span>
+                    <Hr />
                   </Paragraph3>
                   <Paragraph3>
                     Province:
-                    {tablee.province}
+                    <Span>{tablee.province}</Span>
                   </Paragraph3>
+                  <Hr />
                   <Paragraph3>
                     
                     Country:
-                    {tablee.country}
+                    <Span>{tablee.country}</Span>
                   </Paragraph3>
-                </Paragraph2>
-                <Hr />
+                  <Hr />
+               
+               
                 <div>
                   <Button>
                     <Link to={`/edits/${tablee.id}`} className="ln">
