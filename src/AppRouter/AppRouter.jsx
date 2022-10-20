@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import EditTable from "../Components/Tables/Edit/EditTable";
 import Profiles from "../Components/Profiles/Profile";
 import EditProfile from "../Components/Profiles/EditProfile/EditProfile";
